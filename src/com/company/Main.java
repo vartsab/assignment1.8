@@ -38,6 +38,8 @@ public class Main {
 
     public static void textValidator (String textToValidate) {
         int length = textToValidate.length();
+/*
+//      Версия 1
         for (int i = 0; i < length; i++) {
             for (int j = i+1; j < length; j++) {
                 if ( textToValidate.charAt(i) == textToValidate.charAt(j) ) {
@@ -48,6 +50,18 @@ public class Main {
                 }
             }
         }
+
+//      Версия 2*/
+        for (int i = 0; i < length; i++) {
+            if (textToValidate.charAt(i) == textToValidate.charAt(i+1)) {
+                System.out.println("В исходной строке \"" + textToValidate + "\" был найден повторяющийся символ \""
+                            + textToValidate.charAt(i++) + "\" в позиции " + (i) + " и в позиции " + (i+1)
+                            + ".");
+                return;
+            }
+        }
+
+
     }
 
     public static void mirrorTheArray (int arr[] ) {
