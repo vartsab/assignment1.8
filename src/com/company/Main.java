@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void leapYear (int year) {
-        if ( ((year % 100 == 0) && (year % 400 == 0)) || ((year % 100 != 0) && (year % 4 == 0)) ) {
+        if ( (year % 400 == 0) || ((year % 100 != 0) && (year % 4 == 0)) ) {
             System.out.println(year + " — високосный год");
         }
         else {
